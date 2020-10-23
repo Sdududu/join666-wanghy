@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 举例sql查询
+  namespace = 绑定一个对应的Dao/Mapper接口，唯一定位
+  代替了原来的..daoImpl，更加简单化，只要写接口即可
+  id对应着原来impl重写方法的名字，也就对应着接口中的名字
+  里面是sql语句
+  resultType:返回结果类型，所有返回泛型中所对应的集合
+-->
+<mapper namespace="com.join.dao.UserDao">
+    <select id="getUserList"  resultType="com.join.entity.User">
+     select * from mybatis.user
+ </select>
+</mapper>
+
